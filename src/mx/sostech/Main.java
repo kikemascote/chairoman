@@ -1,13 +1,14 @@
 package mx.sostech;
 
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
 public class Main {
 
-    static SuperHumano superHumano = new SuperHumano();
+    //static SuperHumano superHumano = new SuperHumano();
     static Scanner scanner = new Scanner(System.in);
     static LinkedList<SuperHumano> list = new LinkedList<>();
     public static void main(String[] args) {
@@ -78,23 +79,24 @@ public class Main {
         System.out.println("Edad:");
         superHumano.setEdad(parseInt(scanner.nextLine()));
         System.out.println("Nivel de pelea: ");
-        superHumano.setLvlPelea(parseInt(scanner.nextLine()));
+        //superHumano.setLvlPelea(parseInt(scanner.nextLine()));
+        superHumano.setLvlPelea(new Random().nextInt(1000));
         list.add(superHumano);
 
         System.gc();
     }
 
     public static void printer() {
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("Nombre: " + list.get(i).getNombre());
-            System.out.println("Edad: " + list.get(i).getEdad());
-            System.out.println("Nacionalidad: " + list.get(i).getNacionalidad());
-            System.out.println("Genero: " + list.get(i).getGenero());
-            System.out.println("Alias: " + list.get(i).getAlias());
-            System.out.println("Faccion: " + list.get(i).getFaccion());
-            System.out.println("Poder: " + list.get(i).getPoder());
-            System.out.println("Debilidad: " + list.get(i).getKriptonita());
-            System.out.println("Nivel de pelea: " + list.get(i).getLvlPelea());
+        for (SuperHumano humano : list) {
+            System.out.println("Nombre: " + humano.getNombre());
+            System.out.println("Edad: " + humano.getEdad());
+            System.out.println("Nacionalidad: " + humano.getNacionalidad());
+            System.out.println("Genero: " + humano.getGenero());
+            System.out.println("Alias: " + humano.getAlias());
+            System.out.println("Faccion: " + humano.getFaccion());
+            System.out.println("Poder: " + humano.getPoder());
+            System.out.println("Debilidad: " + humano.getKriptonita());
+            System.out.println("Nivel de pelea: " + humano.getLvlPelea());
         }
     }
 
