@@ -3,6 +3,15 @@ package mx.sostech;
 public class SuperHumano extends Humano {
 
     private String alias, poder, faccion, kriptonita;
+    int lvlPelea;
+
+    public int getLvlPelea() {
+        return lvlPelea;
+    }
+
+    public void setLvlPelea(int lvlPelea) {
+        this.lvlPelea = lvlPelea;
+    }
 
     public String getAlias() {
         return alias;
