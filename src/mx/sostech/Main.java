@@ -7,12 +7,12 @@ public class Main {
 
     static SuperHumano superHumano = new SuperHumano();
     static Scanner scanner = new Scanner(System.in);
-
+    static LinkedList<SuperHumano> list = new LinkedList<>();
     public static void main(String[] args) {
         // write your code here
         int cant = 0, id = 0;
 
-        LinkedList<SuperHumano> list = new LinkedList<>();
+
 
         // System.out.println("cuantos superheroes quieres crear?");
         // cant = scanner.nextInt();
@@ -22,14 +22,14 @@ public class Main {
             if (list.isEmpty()) {
                 System.out.println("Introduce un superheroe:\n");
                 creaHeroe();
-                list.add(superHumano);
+
             } else {
                 System.out.println("quieres\n1)crear un super heroe\n2)ver superheroes\n3)salir!");
                 cant = scanner.nextInt();
                 switch (cant) {
                     case 1:
                         creaHeroe();
-                        list.add(superHumano);
+                        // list.add(superHumano);
                         break;
                     case 2:
                         for (int i = 0; i < list.size(); i++) {
@@ -57,6 +57,7 @@ public class Main {
     }
 
     private static void creaHeroe() {
+        SuperHumano superHumano = new SuperHumano();
         System.out.println("Nombre:");
         superHumano.setNombre(scanner.nextLine());
         System.out.println("Nacionalidad:");
@@ -73,6 +74,7 @@ public class Main {
         superHumano.setFaccion(scanner.nextLine());
         System.out.println("Edad:");
         superHumano.setEdad(scanner.nextInt());
+        list.add(superHumano);
         System.gc();
     }
 }
