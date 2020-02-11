@@ -2,7 +2,15 @@ package mx.sostech;
 
 public class Humano {
     private String nombre, nacionalidad, genero;
-    private int edad;
+    private int edad, vida = 100;
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public int getVida() {
+        return vida;
+    }
 
     public String getNombre() {
         return nombre;
