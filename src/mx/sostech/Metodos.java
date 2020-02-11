@@ -55,7 +55,7 @@ public class Metodos {
 
     }
 
-    private static void creaHeroe() {
+    private void creaHeroe() {
         SuperHumano superHumano = new SuperHumano();
         System.out.println("Nombre:");
         superHumano.setNombre(scanner.nextLine());
@@ -111,7 +111,7 @@ public class Metodos {
 //        }
 //
 //    }
-    public static void pelea(int player1, int player2) {
+    public void pelea(int player1, int player2) {
         int btlLvl1, btlLvl2, mov11, mov12, mov13, mov21, mov22, mov23, vida1, vida2;
         btlLvl1 = list.get(player1).getLvlPelea();
         btlLvl2 = list.get(player2).getLvlPelea();
